@@ -10,6 +10,11 @@ The section titles below refer the environments in this article.
 For running the code copy paste the code presented below in [Mathematica](https://www.wolfram.com/mathematica/trial/).
 The same code can be found in the Mathematica file [dP-surface-lattice.nb](https://raw.githubusercontent.com/niels-lubbes/cyclides/master/dP-surface-lattice.nb).
 
+## Verification of parametric type
+
+## Experiment with surfaces
+
+
 ## Automatic verification for Lemma 11
 
 
