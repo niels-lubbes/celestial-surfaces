@@ -237,7 +237,7 @@ Return[ToString[q]];
 
 ## Automatic verification for Lemma 15
 
-The following code is for the proof of Lemma 15.
+The following code is for the proof of [Lemma 15](https://arxiv.org/abs/?).
 
 ```Mathematica
 (*
@@ -309,7 +309,8 @@ Output
 
 ## Intersection numbers for Lemma 21
 
-We display the intersection products of classes on dP surface of degree 5 (see Lemma 21).
+We display the intersection products of classes on dP surface of degree 5
+as considered in [Lemma 21](https://arxiv.org/abs/?).
 
 ```Mathematica
 allBX5 = {b12, b13, b23, bp12, bp13, bp23, bt12, bt13, bt23};
@@ -352,7 +353,8 @@ Output:
 
 ## Intersection numbers for Lemma 22
 
-Intersection products of classes on dP surface of degree 6 (see Lemma 22)
+Intersection products of classes on dP surface of degree 6
+as considered in [Lemma 22](https://arxiv.org/abs/?)
 
 ```Mathematica
 allBX6 = {b12, bp12, bt12};
@@ -385,7 +387,7 @@ Output
 ## Intersection numbers for Proposition 33
 
 Intersection products of classes on dP surface of degree 4 such that B(X)
-has four components (see Proposition 33).
+has four components (see [Proposition 33](https://arxiv.org/abs/?)).
 
 ```Mathematica
 BGE4 = BX4 ~Join~ GX4 ~Join~ EX4;
@@ -408,5 +410,4 @@ Output
     e2    0    1    0   1  0  0  0   1    0 -1  0  0
     e3    1    0    0   1  0  0  1   0    0  0 -1  0
     e4    0    1    1   0  0  0  1   0    0  0  0 -1
-
 
