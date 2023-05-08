@@ -134,11 +134,10 @@ for additional code that enables to construct Cliffordian surfaces by adjusting 
 
 ## Initialization of classes  in the Neron-Severi lattice
 
-For the following see [Section 2](https://arxiv.org/abs/?).
-
-We represent elements in the Neron-Severi lattice N(X) of a dP surface in terms of a list such that
-`a0*l0+a1*l1+c1*e1+...+c4*e4` is represented as the list `{a0,a1,c1,c2,c3,c4}`.
-
+We follow the notations and definitions at [Section 2](https://arxiv.org/abs/?).
+The code below encodes elements in the Neron-Severi lattice N(X) of a dP surface
+in terms of a list such that the class `a0*l0+a1*l1+c1*e1+...+c4*e4`
+is represented as the list `{a0,a1,c1,c2,c3,c4}`.
 
 ```Mathematica
 Remove["Global`*"]
