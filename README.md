@@ -55,16 +55,15 @@ B = isp@{1, u0*Cos[b] + u1, u0*Sin[b] + u2, u3};
 psi1 = dh@sp@hp[A, B];
 
 (* encoding of parametric type *)
-paramType2Map[t0_, t1_, t2_, t3_, u0_, u1_, u2_, u3_] :=
-  Module[{aa, bb, cc, dd, ee, ff, gg, hh, qq},
+paramType2Map[t0_, t1_, t2_, t3_, u0_, u1_, u2_, u3_] := Module[{aa, bb, cc, dd, ee, ff, gg, hh, qq},
    aa = t1 + t0*Cos[a]; bb = t2 + t0*Sin[a]; cc = t3;
    dd = (aa^2 + bb^2 + cc^2 - 1)/2;
    ee = u1 + u0*Cos[b]; ff = u2 + u0*Sin[b]; gg = u3;
    hh = (ee^2 + ff^2 + gg^2 - 1)/2;
    qq = -aa*hh - bb*gg + cc*ff - dd*ee + (dd + 1)*(hh + 1);
    Return[{aa*ee - bb*ff - cc*gg - dd*hh,
-      aa*ff + bb*ee + cc*hh - dd*gg, aa*gg - bb*hh + cc*ee + dd*ff}/
-     qq];
+           aa*ff + bb*ee + cc*hh - dd*gg,
+           aa*gg - bb*hh + cc*ee + dd*ff}/qq ];
    ];
 psi2 = paramType2Map[t0, t1, t2, t3, u0, u1, u2, u3];
 ```
@@ -89,20 +88,20 @@ Output:
 We initialize the parametric types in [Table 2](https://arxiv.org/abs/?).
 
 ```Mathematica
-D3a = {1,     -1, 0,  0}~Join~{1,   0, 3/2,  0};
-D3b = {1/10, 1/2, 0,  0}~Join~{1/2, 0, 1/2,  0};
-D3c = {3/10, 1/2, 0,  0}~Join~{1/2, 0, 1/2,  0};
-D3d = {1/10,   0, 0, -4}~Join~{1,   0,   0, -1};
-D3e = {1/5,  1/2, 0,  0}~Join~{1/2, 0, 1/2,  0};
+D3a = {   1,  -1, 0, 0}~Join~{  1,   0, 3/2, 0};
+D3b = {1/10, 1/2, 0, 0}~Join~{1/2,   0, 1/2, 0};
+D3c = {3/10, 1/2, 0, 0}~Join~{1/2,   0, 1/2, 0};
+D3d = {1/10,   0, 0,-4}~Join~{  1,   0,   0,-1};
+D3e = { 1/5, 1/2, 0, 0}~Join~{1/2,   0, 1/2, 0};
 
-D4a = {1,      1, 0,  0}~Join~{1,   0,    1, 0};
-D4b = {1/2,    0, 1,  0}~Join~{1/2, 1,    0, 0};
-D4c = {1/2,  1/2, 0,  0}~Join~{1/2, 0,  1/2, 0};
-D4d = {1,   -3/2, 0,  0}~Join~{1,   0, -3/2, 0};
+D4a = {   1,   1, 0, 0}~Join~{  1,   0,   1, 0};
+D4b = { 1/2,   0, 1, 0}~Join~{1/2,   1,   0, 0};
+D4c = { 1/2, 1/2, 0, 0}~Join~{1/2,   0, 1/2, 0};
+D4d = {   1,-3/2, 0, 0}~Join~{  1,   0,-3/2, 0};
 
-D5a = {1, 0, 0, 0}~Join~{1, 3/2, 0, 0};
-D5b = {1, 0, 0, 0}~Join~{1,   2, 0, 0};
-D5c = {1, 0, 0, 0}~Join~{1, 5/2, 0, 0};
+D5a = {   1,   0, 0, 0}~Join~{  1, 3/2,   0, 0};
+D5b = {   1,   0, 0, 0}~Join~{  1,   2,   0, 0};
+D5c = {   1,   0, 0, 0}~Join~{  1, 5/2,   0, 0};
 ```
 
 Plot surface with parametric type `D5a`
