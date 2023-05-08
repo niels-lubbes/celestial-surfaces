@@ -8,11 +8,19 @@ of some of the proofs in the article [Self-intersections of surfaces that contai
 The section titles below refer the environments in this article.
 
 For running the code copy paste the code presented below in [Mathematica](https://www.wolfram.com/mathematica/trial/).
-The same code can be found in the Mathematica file [dP-surface-lattice.nb](https://raw.githubusercontent.com/niels-lubbes/cyclides/master/dP-surface-lattice.nb).
+The same code can be found in the Mathematica files
+[dP-surface-lattice.nb](https://github.com/niels-lubbes/celestial-surfaces/blob/master/dP-surface-lattice.nb)
+and
+[parametric-type.nb](https://github.com/niels-lubbes/celestial-surfaces/blob/master/parametric-type.nb).
+.
 
 ## Parametric type
 
-```
+We verify that
+See Section 2 of [Self-intersections of surfaces that contain two circles through each point](https://arxiv.org/abs/?).
+
+
+```Mathematica
 Remove["Global`*"]
 
 (* projectivized Hamiltonian product *)
@@ -62,7 +70,7 @@ We verify that the numerator and denominators
 of the entries of `psi1` and `psi2` are the equal up to constant factor 4,
 and thus equal.
 
-```
+```Mathematica
 Table[ Expand@Numerator@psi1[[i]] == Expand[4*Numerator@psi2[[i]]], {i, 3}]
 Table[ Expand@Denominator@psi1[[i]] == Expand[4*Denominator@psi2[[i]]], {i, 1, 3}]
 ```
@@ -75,7 +83,7 @@ Output:
 
 ## Experiment with Cliffordian surfaces
 
-```
+```Mathematica
 D3a = {1, -1, 0, 0}~Join~{1, 0, 3/2, 0};
 D3b = {1/10, 1/2, 0, 0}~Join~{1/2, 0, 1/2, 0};
 D3c = {3/10, 1/2, 0, 0}~Join~{1/2, 0, 1/2, 0};
@@ -109,7 +117,7 @@ Output:
 
     {1, 0, 0, 0, 1, 3/2, 0, 0}
 
-![output image](https://raw.githubusercontent.com/niels-lubbes/celestial-surface/master/D5a.png "Cliffordian surface D5a")
+![output image](https://raw.githubusercontent.com/niels-lubbes/celestial-surfaces/master/D5a.png?token=GHSAT0AAAAAACCLVZOYCSWJRK5RF7HMFOZMZCY6PDA "Cliffordian surface D5a")
 
 
 See the Mathematica file
@@ -125,7 +133,7 @@ We represent elements in the Neron-Severi lattice N(X) of a dP surface in terms 
 `a0*l0+a1*l1+c1*e1+...+c4*e4` is represented as the list `{a0,a1,c1,c2,c3,c4}`.
 
 
-```
+```Mathematica
 Remove["Global`*"]
 
 (* The intersection product of classes u and v is computed as u.M.v. *)
@@ -168,7 +176,7 @@ Output
 
 We define shorthand notation for the classes in the sets B(X), E(X) and G(X).
 
-```
+```Mathematica
 (*declare classes in E(X)*)
 e1 = {0, 0, 1, 0, 0, 0}; e2 = {0, 0, 0, 1, 0, 0}; e3 = {0, 0, 0, 0, 1, 0}; e4 = {0, 0, 0, 0, 0, 1};
 e01 = {1, 0, -1, 0, 0, 0}; e02 = {1, 0, 0, -1, 0, 0}; e03 = {1, 0, 0, 0, -1, 0}; e04 = {1, 0, 0, 0, 0, -1};
@@ -190,7 +198,7 @@ bt24 = {0, 0, 0, 1, 0, -1}; bt34 = {0, 0, 0, 0, 1, -1};
 
 The following methods converts a class or real structure to a string.
 
-```
+```Mathematica
 str[q_] := Module[{},
 (*E(X)*)
 If[q == e1, Return["e1"]]; If[q == e2, Return["e2"]]; If[q == e3, Return["e3"]]; If[q == e4, Return["e4"]];
@@ -214,11 +222,11 @@ Return[ToString[q]];
 ];
 ```
 
-## Automatic verification for Lemma 11
+## Automatic verification for Lemma 15
 
-The following code is for the proof of Lemma 11.
+The following code is for the proof of Lemma 15.
 
-```
+```Mathematica
 (*
 Construct all possible quartets {a,b,u,v} in B(X) such that:
 l0.a>0, l0.b>0,
@@ -257,7 +265,7 @@ Output
 
 From the quartet in `reducedQuartetList`, we construct B(X), G(X) and E(X).
 
-```
+```Mathematica
 {q1, q2, q3, q4} = reducedQuartetList[[1]];
 BX4 = Select[ blist, # . M . q1 != -1 && # . M . q2 != -1 && # . M . q3 != -1 && # . M . q4 != -1 &]
 GX4 = Select[ glist, # . M . q1 >= 0 && # . M . q2 >= 0 && # . M . q3 >= 0 && # . M . q4 >= 0 &]
@@ -273,7 +281,7 @@ Output
 
 Conversion of output to shorthand notation.
 
-```
+```Mathematica
 str@BX4
 str@GX4
 str@EX4
@@ -286,11 +294,11 @@ Output
     {e1, e2, e3, e4}
 
 
-## Intersection numbers for Lemma 19
+## Intersection numbers for Lemma 21
 
-We display the intersection products of classes on dP surface of degree 5 (see Lemma 19).
+We display the intersection products of classes on dP surface of degree 5 (see Lemma 21).
 
-```
+```Mathematica
 allBX5 = {b12, b13, b23, bp12, bp13, bp23, bt12, bt13, bt23};
 allGX5 = {g0, g1, g12, g13, g23};
 allEX5 = {e1, e2, e3, e01, e02, e03, e11, e12, e13};
@@ -329,11 +337,11 @@ Output:
     e13   1   0   0   0   -1   -1    0   -1   -1   1  0   1   0   0   0  0  1  1   1   0   0   0  -1
 
 
-## Intersection numbers for Lemma 20
+## Intersection numbers for Lemma 22
 
-Intersection products of classes on dP surface of degree 6 (see Lemma 20)
+Intersection products of classes on dP surface of degree 6 (see Lemma 22)
 
-```
+```Mathematica
 allBX6 = {b12, bp12, bt12};
 allGX6 = {g0, g1, g12};
 allEX6 = {e1, e2, e01, e02, e11, e12};
@@ -369,7 +377,7 @@ Output
 Intersection products of classes on dP surface of degree 4 such that B(X)
 has four components (see Proposition 33).
 
-```
+```Mathematica
 BGE4 = BX4 ~Join~ GX4 ~Join~ EX4;
 tab = Table[ BGE4[[i]].M.BGE4[[j]], {i, 1, Length[BGE4]}, {j, 1, Length[BGE4]}];
 TableForm@({{x} ~Join~ (str/@ BGE4)} ~Join~ Transpose[{str/@ BGE4} ~Join~ Transpose@tab])
