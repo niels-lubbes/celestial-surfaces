@@ -125,7 +125,7 @@ Output:
 
     {1, 0, 0, 0, 1, 3/2, 0, 0}
 
-![output image](https://raw.githubusercontent.com/niels-lubbes/celestial-surfaces/master/D5a.png?token=GHSAT0AAAAAACCLVZOYCSWJRK5RF7HMFOZMZCY6PDA "Cliffordian surface D5a")
+![output image](https://raw.githubusercontent.com/niels-lubbes/celestial-surfaces/master/D5a.png "Cliffordian surface D5a")
 
 See the Mathematica file
 [parametric-type.nb](https://raw.githubusercontent.com/niels-lubbes/cyclides/master/cyclides.nb?token=AF74RI5WHEIOYDZWOJAIARTBUUO6G)
