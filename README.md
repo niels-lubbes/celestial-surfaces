@@ -128,7 +128,7 @@ Output:
 ![output image](https://github.com/niels-lubbes/celestial-surfaces/blob/680bbd5426e3c9514ff83d289d9c801907c89846/D5a.png "Cliffordian surface D5a")
 
 See the Mathematica file
-[parametric-type.nb](https://raw.githubusercontent.com/niels-lubbes/celestial-surfaces/master/parametric-type.nb)
+[parametric-type.nb](https://github.com/niels-lubbes/celestial-surfaces/blob/bc6b177a28351c151d881baf52f1e162066d086a/parametric-type.nb)
 for additional code that enables to construct Cliffordian surfaces by adjusting sliders.
 
 
