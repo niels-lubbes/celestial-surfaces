@@ -125,10 +125,10 @@ Output:
 
     {1, 0, 0, 0, 1, 3/2, 0, 0}
 
-![output image](https://raw.githubusercontent.com/niels-lubbes/celestial-surfaces/master/D5a.png "Cliffordian surface D5a")
+![output image](https://github.com/niels-lubbes/celestial-surfaces/blob/680bbd5426e3c9514ff83d289d9c801907c89846/D5a.png "Cliffordian surface D5a")
 
 See the Mathematica file
-[parametric-type.nb](https://raw.githubusercontent.com/niels-lubbes/cyclides/master/cyclides.nb?token=AF74RI5WHEIOYDZWOJAIARTBUUO6G)
+[parametric-type.nb](https://raw.githubusercontent.com/niels-lubbes/celestial-surfaces/master/parametric-type.nb)
 for additional code that enables to construct Cliffordian surfaces by adjusting sliders.
 
 
