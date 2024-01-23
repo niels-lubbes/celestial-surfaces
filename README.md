@@ -4,7 +4,7 @@
 ## Introduction
 
 We present Mathematica code for the automatic verification
-of some of the proofs in the article [Self-intersections of surfaces that contain two circles through each point](https://arxiv.org/abs/?).
+of some of the proofs in the article [Self-intersections of surfaces that contain two circles through each point](https://nielslubbes.com/pp/preprint4-sing.pdf).
 Below we refer to the environments in this article.
 
 For running the code copy paste the code presented below in [Mathematica](https://www.wolfram.com/mathematica/trial/).
@@ -17,7 +17,7 @@ and
 ## Parametric type
 
 The following code verifies that the map associated to a parametric type is
-the map defined at [Remark 9](https://arxiv.org/abs/?).
+the map defined at [Remark 9](https://nielslubbes.com/pp/preprint4-sing.pdf).
 
 ```Mathematica
 Remove["Global`*"]
@@ -86,7 +86,7 @@ Output:
 
 ## Experiment with Cliffordian surfaces
 
-We initialize the parametric types in [Table 2](https://arxiv.org/abs/?).
+We initialize the parametric types in [Table 2](https://nielslubbes.com/pp/preprint4-sing.pdf).
 
 ```Mathematica
 D3a = {   1,  -1, 0, 0}~Join~{  1,   0, 3/2, 0};
@@ -134,7 +134,7 @@ for additional code that enables to construct Cliffordian surfaces by adjusting 
 
 ## Initialization of classes  in the Neron-Severi lattice
 
-We follow the notations and definitions at [Section 2](https://arxiv.org/abs/?).
+We follow the notations and definitions at [Section 2](https://nielslubbes.com/pp/preprint4-sing.pdf).
 The code below encodes elements in the Neron-Severi lattice N(X) of a dP surface
 in terms of a list such that the class `a0*l0+a1*l1+c1*e1+...+c4*e4`
 is represented as the list `{a0,a1,c1,c2,c3,c4}`.
@@ -236,7 +236,7 @@ Return[ToString[q]];
 
 ## Automatic verification for Lemma 15
 
-The following code is for the proof of [Lemma 15](https://arxiv.org/abs/?).
+The following code is for the proof of [Lemma 15](https://nielslubbes.com/pp/preprint4-sing.pdf).
 
 ```Mathematica
 (*
@@ -309,7 +309,7 @@ Output
 ## Intersection numbers for Lemma 21
 
 We display the intersection products of classes on dP surface of degree 5
-as considered in [Lemma 21](https://arxiv.org/abs/?).
+as considered in [Lemma 21](https://nielslubbes.com/pp/preprint4-sing.pdf).
 
 ```Mathematica
 allBX5 = {b12, b13, b23, bp12, bp13, bp23, bt12, bt13, bt23};
@@ -353,7 +353,7 @@ Output:
 ## Intersection numbers for Lemma 22
 
 Intersection products of classes on dP surface of degree 6
-as considered in [Lemma 22](https://arxiv.org/abs/?)
+as considered in [Lemma 22](https://nielslubbes.com/pp/preprint4-sing.pdf)
 
 ```Mathematica
 allBX6 = {b12, bp12, bt12};
@@ -386,7 +386,7 @@ Output
 ## Intersection numbers for Proposition 33
 
 Intersection products of classes on dP surface of degree 4 such that B(X)
-has four components (see [Proposition 33](https://arxiv.org/abs/?)).
+has four components (see [Proposition 33](https://nielslubbes.com/pp/preprint4-sing.pdf)).
 
 ```Mathematica
 BGE4 = BX4 ~Join~ GX4 ~Join~ EX4;
